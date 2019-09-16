@@ -1,0 +1,40 @@
+<h2>My data</h2>
+<button (click)="toggle1()" id="bt1">
+        Name
+    </button>
+    <button (click)="toggle2()" id="bt2">
+            Account number
+        </button>
+
+
+<ng-container *ngIf="show1">
+  <div *ngFor="let test of tests">
+
+        <li>
+                {{ test.name }}
+        </li>
+       <!-- <label>name:
+                <input [(ngModel)]="test.name" placeholder="name"/>
+              </label>-->
+
+  </div>
+</ng-container>
+
+  
+
+ 
+    
+    <ng-container *ngIf="show">
+            <div *ngFor="let test of tests">
+
+                    <li>
+                            {{ test.accnumber }}
+                    </li>
+              </div>
+    </ng-container>
+  
+
+
+    
+    
+  
