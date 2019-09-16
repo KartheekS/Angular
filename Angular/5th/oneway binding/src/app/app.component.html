@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+<div>
+  <select (change) = "onchange($event.target.value)">
+    <option value =-1>Select Animal</option>
+    <option *ngFor = "let item of animals" value={{item.id}}>
+      {{item.name}}
+    </option>
+  </select>
+<br>
+<br>
+<br>
+
+<img *ngIf="hello" src="assets/{{x}}.png"/>
+
+</div>
+
+<router-outlet></router-outlet>
