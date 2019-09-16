@@ -1,0 +1,13 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  
+  <input [(ngModel)]="name" (input)="caseDivide()" type="text"  placeholder="Enter a text"/>
+  <ng-container *ngIf="show">
+       <p>Entered lowercase: {{Displaylowercase}}</p>
+       <p>Entered Uppercase: {{Displayuppercase}}</p>
+  </ng-container>
+  
+<router-outlet></router-outlet>
