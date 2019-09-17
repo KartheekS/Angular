@@ -8,12 +8,15 @@ enum WeekDay{
     Sunday
     }
 
-function getday(d : number) : String{
+function getday<T>(d : T) : string{
  
-    return WeekDay[d];
+    var p = Number(d);
+     
+     return WeekDay[p];
   
 }
-
+// usage number getday(6);
+// string getday("6");
  var z = getday(6);  /// input the date (1 to 7) to get day of week
  console.log(z);
 

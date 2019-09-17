@@ -9,7 +9,8 @@ var WeekDay;
     WeekDay[WeekDay["Sunday"] = 7] = "Sunday";
 })(WeekDay || (WeekDay = {}));
 function getday(d) {
-    return WeekDay[d];
+    var p = Number(d);
+    return WeekDay[p];
 }
 var z = getday(6); /// input the date (1 to 7) to get day of week
 console.log(z);
