@@ -1,0 +1,76 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div >
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+ 
+  <p>{{date}}</p>
+</div>
+
+
+<form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+  <label>
+    First Name:
+    <input type="text" formControlName="firstName" >
+  </label>
+
+  <label>
+    Last Name:
+    <input type="text" formControlName="lastName">
+  </label>
+  <label>
+    Age:
+    <input (keypress)="numberOnly($event)" type="text" formControlName="age" maxlength="2">
+  </label>
+
+  <div formGroupName="address">
+    <h3>Address</h3>
+
+    
+
+    <label>
+      Country:
+       <select (change)= loadstates($event.target.value) formControlName="count">
+        <option value =-1>Select country</option>
+        <option *ngFor = "let item of countries" value={{item.id}}>
+          {{item.name}}
+        </option>
+      </select>
+    </label>
+    
+    <label>
+      State:
+      <select formControlName="state">
+        <option value =-1>Select states</option>
+        <option *ngFor = "let item of s" value={{item}}>
+          {{item}}
+        </option>
+      </select>
+    </label>
+
+    
+  </div>
+
+ 
+
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+
+<hr>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
+
+
